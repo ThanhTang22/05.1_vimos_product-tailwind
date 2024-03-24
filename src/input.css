@@ -56,7 +56,7 @@
 
 @layer components{
     .container-wrap{
-        @apply w-full max-w-screen-xl mx-auto px-8
+        @apply w-full max-w-screen-xl mx-auto px-8 sm:px-12
     }
     .border-test{
         @apply border-2 border-solid border-red-500
@@ -95,20 +95,23 @@
         position: relative;
     }
 
-
+    /* image product */
+    .img-product{
+        @apply w-1/2 mx-auto py-20
+    }
     /* solution cart */
     .solution-cart{
-        @apply rounded-xl my-8 overflow-hidden
+        @apply rounded-xl my-8 overflow-hidden md:w-full md:min-w-52
     }
     .solution-cart-title{
         @apply bg-clr-millbrook py-4 text-center font-semibold text-white
     }
     .solution-cart-descript{
-        @apply bg-clr-alto p-4
+        @apply bg-clr-alto p-4 md:h-full
     }
 
     .btn{
-        @apply rounded-md border-none bg-clr-guardman-red px-20 py-4
+        @apply rounded-md border-none bg-clr-guardman-red px-8 py-4 sm:px-20
     }
     .btn-buy__now{
         @apply text-white text-xl uppercase
@@ -119,11 +122,36 @@
     .intruction-sub-title{
         @apply bg-clr-millbrook py-2 text-center my-4 text-white 
     }
-}
-
-@layer utilities{
     /* buy__now */
     .form-control{
         @apply rounded-lg bg-white my-2 py-2 px-4 w-full
     }
+}
+
+@layer utilities{
+    
+    .hamburger::before,
+    .hamburger::after,    
+    .hamburger{
+        width: 70%;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 100px;
+        
+        display: block;
+        margin: 1.25rem auto;
+    }
+
+    .hamburger::before,
+    .hamburger::after{
+        content: "";
+        width: 100%;
+    }    
+    .hamburger::before{
+        transform: translateY(-8px);
+    }
+    .hamburger::after{
+        transform: translateY(-15px);
+    }
+
 }
