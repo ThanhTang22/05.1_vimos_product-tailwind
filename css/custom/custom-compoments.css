@@ -1,0 +1,18 @@
+
+
+/* @layer components{
+    .container-wrap{
+        @apply w-full max-w-screen-xl mx-auto py-2
+    }
+    .border-test{
+        @apply border-2 border-solid border-red-500
+    }
+
+    .bg-banner-header{
+        background-image: url(../../asset/background/banner-top.jpg);
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+    }
+} */
