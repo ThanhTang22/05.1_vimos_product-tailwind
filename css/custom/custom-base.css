@@ -1,0 +1,22 @@
+
+
+/* @layer base{
+    *,
+    *::before,
+    *::after{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        color-scheme: dark;
+        scroll-behavior: smooth;
+    }
+    /* body {
+        /* font-family: theme(fontFamily.ff-body);
+        color: theme(colors.clr-jambalaya);
+        font-size: theme(fontSize.base) */
+        @apply font-ff-body text-base text-clr-jambalaya;
+    } */
+} */
+
