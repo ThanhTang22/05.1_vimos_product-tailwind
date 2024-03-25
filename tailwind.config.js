@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: [
+    "./src/**/*.{html,js}",
+    "./js/**/*.{html,js}"
+  ],
 
   theme: {
     extend: {
@@ -16,7 +19,7 @@ module.exports = {
 
       fontFamily:{
         'ff-body': 'Roboto, sans-serif',
-        'ff-heading': 'Dancing+Script, sans-serif',
+        'ff-heading': 'Dancing Script, sans-serif',
       },
 
       backgroundImage:{

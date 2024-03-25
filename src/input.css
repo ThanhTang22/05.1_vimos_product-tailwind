@@ -35,13 +35,13 @@
     }
 
     h1{
-        @apply text-4xl
+        @apply text-5xl
     }
     h2{
-        @apply text-3xl 
+        @apply text-4xl 
     }
     h3{
-        @apply text-xl font-semibold
+        @apply text-2xl font-semibold
     }
 
     section{
@@ -56,7 +56,7 @@
 
 @layer components{
     .container-wrap{
-        @apply w-full max-w-screen-xl mx-auto px-8 sm:px-12
+        @apply relative w-full max-w-screen-xl mx-auto px-8 sm:px-12
     }
     .border-test{
         @apply border-2 border-solid border-red-500
@@ -97,7 +97,7 @@
 
     /* image product */
     .img-product{
-        @apply w-1/2 mx-auto py-20
+        @apply w-2/3 mx-auto py-20
     }
     /* solution cart */
     .solution-cart{
@@ -129,7 +129,6 @@
 }
 
 @layer utilities{
-    
     .hamburger::before,
     .hamburger::after,    
     .hamburger{
@@ -138,8 +137,10 @@
         background-color: #fff;
         border-radius: 100px;
         
+
         display: block;
-        margin: 1.25rem auto;
+        margin: 1.375rem auto;
+
     }
 
     .hamburger::before,
@@ -148,10 +149,32 @@
         width: 100%;
     }    
     .hamburger::before{
-        transform: translateY(-8px);
+        transform: translateY(-10px);
     }
     .hamburger::after{
         transform: translateY(-15px);
     }
 
+
+    /* nav toggle */
+    .nav-bg{
+        @apply fixed z-[9999] bg-clr-indochine/20 w-full h-svh
+    }
+
+    /* nav hidden */
+    .nav-cart--hidden,
+    .nav-hidden{
+        @apply h-0 invisible
+    }
+    .nav-visible{
+        @apply h-svh visible
+    }
+
+    /* header nav relative */
+    .header-nav--static{
+        @apply relative w-full max-w-screen-xl  mx-auto
+    }
+    .header-nav--fixed{
+        @apply fixed top-0 left-0 right-0 bg-clr-peppermint/50 z-[9998]  
+    }
 }
