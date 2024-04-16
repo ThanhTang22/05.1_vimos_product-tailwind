@@ -617,32 +617,50 @@ p {
 }
 
 .bg-banner-header{
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
             60deg, 
             rgba(245, 236, 227, 0.7), 
             rgba(245, 236, 227, 0.8)), 
-        url(../../asset/background/banner-top.jpg);
-  width: 100%;
-  height: 100%;
+        url(./asset/background/banner-top.jpg);
+    
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+        background-position:50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover; */
   position: relative;
-  background-position:50% 50%;
-  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg,rgba(245, 236, 227, 0.7),rgba(245, 236, 227, 0.8)),url('./asset/background/banner-top.jpg');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat
 }
 
 .bg-banner-product{
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
             60deg,
             rgba(245, 236, 227, 0.9), 
             rgba(245, 236, 227, 0.8)
         ),
-        url(../asset/background/truc-moc-vi-an.jpg);
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+        url(./asset/background/truc-moc-vi-an.jpg);
+
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+        height: 100%;
+        position: relative; */
   position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg,rgba(245, 236, 227, 0.9), rgba(245, 236, 227, 0.8)),url('./asset/background/truc-moc-vi-an.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat
 }
 
 /* image product */
