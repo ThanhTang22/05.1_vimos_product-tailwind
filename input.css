@@ -1,0 +1,180 @@
+/* @config "./tailwind.dashboard.config.js"; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import "tailwindcss/base";
+@import "tailwindcss/compoments"; */
+
+
+/* @import "../css/custom/custom-base.css";
+@import "../css/custom/custom-compoments.css"; */
+
+@layer base{
+    *,
+    *::before,
+    *::after{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        color-scheme: dark;
+        scroll-behavior: smooth;
+    }
+    body {
+        /* font-family: theme(fontFamily.ff-body);
+        color: theme(colors.clr-jambalaya);
+        font-size: theme(fontSize.base) */
+        @apply font-ff-body text-base text-clr-jambalaya;
+    }
+
+    h1,h2,h3,h4,h5{
+        @apply font-ff-heading font-bold
+    }
+
+    h1{
+        @apply text-5xl
+    }
+    h2{
+        @apply text-4xl 
+    }
+    h3{
+        @apply text-2xl font-semibold
+    }
+
+    section{
+        @apply py-20
+    }
+    p{
+        @apply py-2
+    }
+}
+
+
+
+@layer components{
+    .container-wrap{
+        @apply relative w-full max-w-screen-xl mx-auto px-8 sm:px-12
+    }
+    .border-test{
+        @apply border-2 border-solid border-red-500
+    }
+
+    .bg-banner-header{
+        background-image: linear-gradient(
+            60deg, 
+            rgba(245, 236, 227, 0.7), 
+            rgba(245, 236, 227, 0.8)), 
+        url(../../asset/background/banner-top.jpg);
+    
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+        background-position:50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bg-banner-product{
+        background-image: linear-gradient(
+            60deg,
+            rgba(245, 236, 227, 0.9), 
+            rgba(245, 236, 227, 0.8)
+        ),
+        url(../asset/background/truc-moc-vi-an.jpg);
+
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    /* image product */
+    .img-product{
+        @apply w-2/3 mx-auto py-20
+    }
+    /* solution cart */
+    .solution-cart{
+        @apply rounded-xl my-8 overflow-hidden md:w-full md:min-w-52
+    }
+    .solution-cart-title{
+        @apply bg-clr-millbrook py-4 text-center font-semibold text-white
+    }
+    .solution-cart-descript{
+        @apply bg-clr-alto p-4 md:h-full
+    }
+
+    .btn{
+        @apply rounded-md border-none bg-clr-guardman-red px-8 py-4 sm:px-20
+    }
+    .btn-buy__now{
+        @apply text-white text-xl uppercase
+    }
+
+
+    /* intruction */
+    .intruction-sub-title{
+        @apply bg-clr-millbrook py-2 text-center my-4 text-white 
+    }
+    /* buy__now */
+    .form-control{
+        @apply rounded-lg bg-white my-2 py-2 px-4 w-full
+    }
+}
+
+@layer utilities{
+    .hamburger::before,
+    .hamburger::after,    
+    .hamburger{
+        width: 70%;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 100px;
+        
+
+        display: block;
+        margin: 1.375rem auto;
+
+    }
+
+    .hamburger::before,
+    .hamburger::after{
+        content: "";
+        width: 100%;
+    }    
+    .hamburger::before{
+        transform: translateY(-10px);
+    }
+    .hamburger::after{
+        transform: translateY(-15px);
+    }
+
+
+    /* nav toggle */
+    .nav-bg{
+        @apply fixed z-[9999] bg-clr-indochine/20 w-full h-svh
+    }
+
+    /* nav hidden */
+    .nav-cart--hidden,
+    .nav-hidden{
+        @apply h-0 invisible
+    }
+    .nav-visible{
+        @apply h-svh visible
+    }
+
+    /* header nav relative */
+    .header-nav--static{
+        @apply relative w-full max-w-screen-xl  mx-auto
+    }
+    .header-nav--fixed{
+        @apply fixed top-0 left-0 right-0 bg-clr-peppermint/50 z-[9998]  
+    }
+}
