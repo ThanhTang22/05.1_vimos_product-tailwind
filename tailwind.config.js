@@ -23,8 +23,8 @@ module.exports = {
       },
 
       backgroundImage:{
-        'banner-top': "url('./asset/background/banner-top.jpg')",
-        'bg-middle': "url('./asset/background/truc-moc-vi-an.jpg')",
+        'banner-top': "linear-gradient(60deg,rgba(245, 236, 227, 0.7),rgba(245, 236, 227, 0.8)),url('./asset/background/banner-top.jpg')",
+        'banner-middle': "linear-gradient(60deg,rgba(245, 236, 227, 0.9), rgba(245, 236, 227, 0.8)),url('./asset/background/truc-moc-vi-an.jpg')",
       }
     },
 
